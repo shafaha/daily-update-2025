@@ -1,0 +1,91 @@
+Design patterns: Design patterns ar ebasixally the well test solution to commonly occuring problem in the software development
+
+Category of the design patters:
+- Creationnal
+- structural
+- behavioural
+
+
+Creationnal: These patterns focus on how objects are created, ensuring that the system remains independent of the specific classes that need to be instantiated. They aim to provide greater flexibility and reuse in creating objects while hiding the complexities of instantiating them.
+Common Creational Design Patterns
+
+Singleton
+    Ensures that a class has only one instance and provides a global point of access to that instance.
+        Use case: Managing resources like database connections, logging services, or configuration settings.
+        Example:
+
+    class Singleton:
+        _instance = None
+        def __new__(cls, *args, **kwargs):
+            if not cls._instance:
+                cls._instance = super().__new__(cls, *args, **kwargs)
+            return cls._instance
+
+Factory Method
+Defines an interface for creating an object but lets subclasses decide which class to instantiate.
+
+    Use case: When the exact type of object to be created is determined by subclass implementations.
+    Example:
+
+    class ShapeFactory:
+        def create_shape(self, shape_type):
+            if shape_type == "circle":
+                return Circle()
+            elif shape_type == "square":
+                return Square()
+
+Abstract Factory
+Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+    Use case: When working with multiple families of objects, ensuring that related objects are used together.
+    Example:
+
+    class GUIFactory:
+        def create_button(self):
+            raise NotImplementedError
+        
+    class WindowsFactory(GUIFactory):
+        def create_button(self):
+            return WindowsButton()
+        
+    class MacOSFactory(GUIFactory):
+        def create_button(self):
+            return MacOSButton()
+
+Builder
+Separates the construction of a complex object from its representation so that the same construction process can create different representations.
+
+    Use case: Creating objects with many optional fields or configurations.
+    Example:
+
+    class CarBuilder:
+        def __init__(self):
+            self.car = Car()
+        
+        def add_engine(self, engine_type):
+            self.car.engine = engine_type
+            return self
+        
+        def add_wheels(self, number):
+            self.car.wheels = number
+            return self
+        
+        def build(self):
+            return self.car
+
+Prototype
+Allows copying an existing object to create new instances rather than creating them from scratch.
+
+    Use case: When object creation is expensive, and you want to create a copy instead.
+    Example:
+
+    import copy
+
+    class Prototype:
+        def clone(self):
+            return copy.deepcopy(self)
+
+Object Pool (less common but sometimes grouped with creational patterns)
+Manages a pool of reusable objects to minimize resource usage.
+
+    Use case: Managing expensive-to-create objects like database connections or threads.
