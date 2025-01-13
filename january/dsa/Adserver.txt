@@ -1,0 +1,21 @@
+[1/11/2025 9:20 PM] +91 81304 01407: Complex problem
+[1/11/2025 9:20 PM] +91 81304 01407: Kuch easy uthana tha
+[1/11/2025 9:32 PM] +91 81304 01407: Joining?
+[1/11/2025 10:53 PM] +91 81304 01407: Ad server design krne bola
+[1/11/2025 10:53 PM] +91 81304 01407: 100k tps
+[1/11/2025 10:53 PM] +91 81304 01407: 50 Ms latency
+[1/11/2025 10:53 PM] +91 81304 01407: 1000 ads Id at a the
+[1/11/2025 10:53 PM] +91 81304 01407: \*time
+[1/11/2025 10:53 PM] +91 81304 01407: One request 100 ad id processing take 30 ms
+[1/11/2025 10:53 PM] +91 81304 01407: How to do 1000 request in 50 ms
+[1/11/2025 10:53 PM] +91 81304 01407: And cache gets updated every hour
+[1/11/2025 10:53 PM] +91 81304 01407: How to catche replacement
+[1/11/2025 10:53 PM] +91 81304 01407: Basically 10 distributed cache
+[1/11/2025 10:53 PM] +91 81304 01407: Each running 100 id
+[1/11/2025 10:53 PM] +91 81304 01407: And 1 extra batch for catche replacement
+[1/11/2025 10:53 PM] +91 81304 01407: Distributed locking during that time
+
+
+())()))()(()(((())(()()))))((((()())(())
+1011101100010001001011000000110010100101
+(()()()()(()
