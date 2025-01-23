@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Hello World",
+    "version": "1.0",
+    "description": "A hello world exttension",
+    "icons": {
+        "128": "assets/icon128.png",
+        "48": "assets/icon48.png"
+    },
+    "action": {
+        "default_icon": {
+            "128": "assets/icon128.png",
+            "48": "assets/icon48.png"
+        },
+        "default_popup": "popup.html",
+        "default_title": "My amazing chrome extension",
+        "options_page": "options.html"
+    }
+}
